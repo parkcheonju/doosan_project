@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        background: pink;
+      }
+      .circle{
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        background: violet;
+        border-radius: 50%;
+      }
+      .border-box{
+        width: 400px;
+        height: 400px;
+        position: absolute;
+        background: red;
+        border-radius: 30%;
+      }
+      .border-box button{
+        width: 200px;
+        height: 200px;
+        background-color: blue;
+        color: white;
+        font-size: 2.5em;
+        border-radius: 30%;
+        cursor: pointer;
+        
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+    <!-- <script>
+        $(function(){
+            //$("css선택자").animate(속성[,시간][,가속도][,콜백함수])
+            $("div.box").animate({left:500, top:100},500).delay(500).animate({top:0,left:0},500)
+        })
+        $(function(){
+          $(".circle").animate({left:500,top:300},500).delay(100).animate({top:1500,left:1500},1000).animate({left:800,top:800},10000)
+          
+          //loop 구현
+          //setInterval(할일,시간 1/1000)
+          setInterval(,500) //0.5초
+        })
+    </script> -->
+
+    <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+    <script>
+    $(function () {
+      //$("css선택자").animate(속성[,시간][,가속도][,콜백함수])
+
+      function ani() {
+        $(".box").animate({ left: 0, top: 0 }, 500).delay(500).animate({ top: 500, left: 500 }, 500)
+      }
+
+      function hi() {
+        $(".circle").animate({top: 1200, right: 500 }, 500).delay(300).animate({ top: 500, left: 500 }, 500)
+      }
+
+      function bye() {
+        $(".border-box").animate({top: 700, right: 700 }, 500).delay(300).animate({ top: 1000, left: 300 }, 500)
+      }
+      //loop 구현  
+      //setInterval(할일,시간 1/1000)
+      setInterval(ani, 500),setInterval(hi, 500), setInterval(bye, 500)
+
+    })
+    </script>
+  </head>
+  <body>
+    <div class="box"></div>
+    <div class="circle"></div>
+    <div class="border-box"><button class="test">눌러봐라</button></div>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+/* ==========
+MediaQuery 
+==========*/
+@media screen and (max-width: 1330px) {#header { height: auto; } 
+.header_cover {display:flex; } 
+.header_cover .logo { float:none; margin:0 auto; padding:20px 0; } 
+#header .full_menu {display: none; } 
+#header .nav {display: none; } 
+#header .gnb {display: none; } 
+#header .mo {display: block;float:none; } 
+ }
